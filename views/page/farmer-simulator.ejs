@@ -1,0 +1,114 @@
+<%- include("../layout/header") %>
+
+  <main class="simulator-page">
+
+    <section class="simulator-hero text-center text-white">
+      <div class="container">
+        <h1 class="fw-bold">🌾 AI Farmer Simulator</h1>
+        <p class="lead">
+          Estimate carbon income using AI-powered regenerative farming analysis
+        </p>
+      </div>
+    </section>
+
+    <section class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <div class="card shadow-lg border-0">
+            <div class="card-header bg-success text-white fw-bold">
+              🤖 Carbon Income Calculator (AI Powered)
+            </div>
+
+            <div class="card-body">
+
+              <!-- FORM -->
+              <form>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+
+                    <input type="number" class="form-control" value="1" min="1" id="farmSize" />
+
+                    <span id="carbonResult">2.5</span>
+                    <span id="incomeResult">3,169</span>
+
+
+
+                    <span class="input-group-text">Acre</span>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Crop Type</label>
+                  <select class="form-select">
+                    <option selected>Rice (AWD Method)</option>
+                    <option>Wheat</option>
+                    <option>Maize</option>
+                  </select>
+                </div>
+            </div>
+
+            <!-- RESULT -->
+            <div class="alert alert-success mt-4">
+              <p class="mb-1">
+                🌱 <b>Carbon Sequestered:</b> Based On..  tCO₂e
+              </p>
+              <h4 class="fw-bold">
+                💰 Expected Income: You Can Calculate
+              </h4>
+              <small class="text-muted">
+                (AI-estimated income after platform & verification share)
+              </small>
+            </div>
+
+            <button type="button" class="btn btn-primary w-100 mt-3">
+              ✨ Analyze Impact with AI
+            </button>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const farmSizeInput = document.getElementById("farmSize");
+  const incomeResult = document.getElementById("incomeResult");
+  const carbonResult = document.getElementById("carbonResult");
+
+  if (!farmSizeInput) {
+    console.error("farmSize input not found");
+    return;
+  }
+
+  const incomePerAcre = 3169;
+  const carbonPerAcre = 2.5;
+
+  function calculate() {
+    const acres = Number(farmSizeInput.value) || 0;
+
+    const income = acres * incomePerAcre;
+    const carbon = acres * carbonPerAcre;
+
+    incomeResult.textContent = income.toLocaleString("en-IN");
+    carbonResult.textContent = carbon.toFixed(1);
+  }
+
+  // 🔥 IMPORTANT
+  farmSizeInput.addEventListener("input", calculate);
+
+  // run once on page load
+  calculate();
+
+});
+</script>
+
+
+  <%- include("../layout/footer") %>

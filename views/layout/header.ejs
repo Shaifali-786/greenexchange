@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>GreenExchange</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/marketplace.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/simulator.css">
+
+
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-lg py-2">
+    <div class="container ">
+
+      <!-- LOGO -->
+      <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" href="/">
+        🌱 <span class="ms-2">GreenExchange</span>
+      </a>
+
+      <!-- TOGGLER -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- MENU -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+          <!-- MAIN LINKS -->
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="/">Home</a>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/stats">Stats</a></li>
+
+
+
+          <!-- TEAM -->
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="/team">Team</a>
+          </li>
+
+          <!-- AUTH LOGIC -->
+          <% if (!currentUser) { %>
+            <li class="nav-item">
+              <a class="btn btn-outline-light px-3" href="/signup">Sign Up</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-light text-success px-3" href="/login">Login</a>
+            </li>
+            <% } else { %>
+
+              <!-- PROFILE DROPDOWN -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown">
+                  👤 <%= currentUser %>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="/profile">My Profile</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li>
+                    <form action="/logout" method="POST" class="px-3">
+                      <button class="btn btn-danger w-100 btn-sm">Logout</button>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+
+              <% } %>
+
+                <!-- CTA BUTTON -->
+                <li class="nav-item ms-lg-3">
+                  <a href="/trees/new" class="btn btn-warning fw-bold shadow-sm">
+                    + Plant Tree
+                  </a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link fw-semibold" href="/farmer-simulator">
+                    🌾 Farmer Simulator (AI)
+                  </a>
+                </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-4">

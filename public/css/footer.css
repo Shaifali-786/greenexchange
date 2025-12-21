@@ -1,0 +1,15 @@
+/* FOOTER */
+footer {
+  margin-top: auto;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  margin:20px;
+}

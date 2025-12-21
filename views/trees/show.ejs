@@ -1,0 +1,14 @@
+<%- include("../layout/boilerplate") %>
+
+<div class="card">
+  <img src="<%= tree.image %>" class="card-img-top">
+  <div class="card-body">
+    <h3><%= tree.location %></h3>
+    <p>Status: <strong><%= tree.status %></strong></p>
+    <p>Uploaded on: <%= tree.createdAt.toDateString() %></p>
+
+    <button class="btn btn-warning">Verify (AI)</button>
+    <button class="btn btn-primary">Mint Credit</button>
+  </div>
+</div>
+<%- include("../layout/footer") %>

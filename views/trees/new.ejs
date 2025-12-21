@@ -1,0 +1,42 @@
+<%- include("../layout/header") %>
+
+<h2 class="mb-4">🌱 Plant a Tree</h2>
+
+<form action="/trees" method="POST" enctype="multipart/form-data">
+
+  <div class="mb-3">
+    <label class="form-label">Adhar Number</label>
+    <input type="text" name="Adhar" class="form-control" placeholder="16 digit" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">State</label>
+    <input type="text" name="State" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">District</label>
+    <input type="text" name="Distric" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">PinCode</label>
+    <input type="number" name="PinCode" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Upload Land Certificate Image</label>
+    <input type="file" name="image" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Expected Price</label>
+    <input type="number" name="price" class="form-control" required>
+  </div>
+
+  <button class="btn btn-success">Submit</button>
+  <a href="/" class="btn btn-secondary ms-2">Cancel</a>
+
+</form>
+
+<%- include("../layout/footer") %>

@@ -1,0 +1,122 @@
+/* MARKETPLACE WRAPPER */
+.marketplace-wrapper {
+  background: linear-gradient(to bottom, #f4fdf7, #ffffff);
+  padding: 60px 0;
+}
+
+/* HEADER */
+.marketplace-header h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+.marketplace-header p {
+  font-size: 1.1rem;
+}
+
+/* CARD */
+.tree-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  background: #fff;
+}
+.tree-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+.tree-img {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* PRICE */
+.price-tag {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #198754;
+}
+
+/* BADGES */
+.badge-status {
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  border-radius: 20px;
+}
+
+/* BUTTON */
+.buy-btn {
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 10px;
+}
+
+/* EMPTY STATE */
+.empty-state {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+/* HERO SECTION */
+.hero-section {
+  background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6")
+              center/cover no-repeat;
+  min-height: 800vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55); /* transparency */
+  padding: 10px;
+}
+
+.hero-section h1 {
+  font-weight: 800;
+}
+
+.hero-section p {
+  max-width: 750px;
+  margin: auto;
+  opacity: 0.9;
+}
+.marketplace-wrapper {
+  background:
+    linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+    url("https://images.unsplash.com/photo-1524593119773-6f6f6f9b5d80")
+    center/cover no-repeat;
+}
+
+.marketplace-wrapper {
+  width: 100%;
+  background: #f8f9fa;
+  padding: 10px;
+}
+
+
+/* HERO SECTION */
+.hero-section {
+  background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6")
+              center/cover no-repeat;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55); /* transparency */
+  padding: 100px 0;
+}
+
+.hero-section h1 {
+  font-weight: 800;
+}
+
+.hero-section p {
+  max-width: 650px;
+  margin: auto;
+  opacity: 0.9;
+}

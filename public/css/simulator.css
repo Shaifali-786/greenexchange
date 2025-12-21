@@ -1,0 +1,14 @@
+.simulator-page {
+  background: #f5fdf8;
+}
+
+.simulator-hero {
+  min-height: 35vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("/images/farm-bg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}

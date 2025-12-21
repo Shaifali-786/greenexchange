@@ -1,0 +1,59 @@
+<%- include("layout/header") %>
+
+<h2>👤 My Profile</h2>
+
+<p><b>Name:</b> <%= user.name %></p>
+<p><b>Email:</b> <%= user.email %></p>
+
+<hr>
+
+<h4>🌱 My Trees</h4>
+<% if (!user.trees || user.trees.length === 0) { %>
+  <p>No trees planted yet.</p>
+<% } else { %>
+  <div class="row">
+    <% user.trees.forEach(tree => { %>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="<%= tree.image %>" class="card-img-top">
+          <div class="card-body">
+            <p><b>State:</b> <%= tree.State %></p>
+            <p><b>District:</b> <%= tree.Distric %></p>
+            <p><b>Price:</b> ₹<%= tree.price %></p>
+            <p><b>Status:</b> <%= tree.status %></p>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+<% } %>
+
+<hr>
+
+<h4>📄 My Certificates</h4>
+<% if (!user.certificates || user.certificates.length === 0) { %>
+  <p>No certificates yet</p>
+<% } else { %>
+  <div class="row">
+    <% user.certificates.forEach(tree => { %>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <p><b>Location:</b> <%= tree.State %>, <%= tree.Distric %></p>
+            <p><b>Price:</b> ₹<%= tree.price %></p>
+
+            <a href="/certificate/<%= tree._id %>/download" class="btn btn-primary btn-sm">
+              Download PDF
+            </a>
+
+            <form action="/resell/<%= tree._id %>" method="POST" style="margin-top:10px;">
+              <button class="btn btn-warning btn-sm">Resell</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+<% } %>
+
+<%- include("layout/footer") %>

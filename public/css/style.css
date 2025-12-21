@@ -1,0 +1,110 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+.marketplace-section {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ),
+    url("/images/soil-pattern.png");
+  background-size: cover;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: 80px;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+
+
+.team-card {
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.team-img {
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Footer */
+.footer-dark {
+  background: linear-gradient(180deg, #0b1220, #020617);
+  color: #cbd5e1;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-brand {
+  font-weight: 700;
+  color: #22c55e;
+}
+
+.footer-title {
+  color: #e5e7eb;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #22c55e;
+}
+
+.footer-input {
+  background: #020617;
+  border: 1px solid #1e293b;
+  color: #e5e7eb;
+}
+
+.footer-input::placeholder {
+  color: #64748b;
+}
+
+.footer-divider {
+  border-color: #1e293b;
+  margin: 30px 0;
+}
+
+.footer-policy {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.footer-policy:hover {
+  color: #22c55e;
+}
+
